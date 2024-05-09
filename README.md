@@ -177,7 +177,7 @@ This other simulation for the same attack by cobaltstrike: https://www.youtube.c
 
 4.When prompted by the script, enter the URL you obtained in step.
 
-NOTE: If you choose to fetch commands from a URL, it will prompt you to enter the URL, If you choose to enter commands directly, it will prompt you to Enter a command to execute
+NOTE: If you choose to fetch commands from a URL it will prompt you to enter the URL, If you choose to enter commands directly it will prompt you to Enter a command to execute
 
 
 
