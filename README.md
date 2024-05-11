@@ -22,8 +22,7 @@ This attack included several stages including exploitation of the (CVE-2011-0611
 3. XDP file: this XDP file contains a malicious XML Data Package (XDP) with a SWF exploit (CVE-2011-0611), It also includes functionality to download additional files via HTML-Smuggling by apache host.
 
 
-4. HTML Smuggling: I used this to make base64 for the DLL payload  and the Jar file before making a host and putting them on the Apache server.
-
+4. HTML Smuggling: the html-smuggling file is used after uploading it to the apache server to download other files, One of the files is DLL payload the other is a small JAR file.
 
 5. JAR file: this jar file used to copy and run the DLL by executing the cmd command.
 
@@ -39,7 +38,7 @@ This attack included several stages including exploitation of the (CVE-2011-0611
 8. PHP backend C2-Server: the attckers used hacked websites as simple PHP C2 Server backend.
 
    
-9. Command and Control: make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
+9. Final result: make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
 
 ![Screenshot from 2024-05-04 17-37-00](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/5cd199b5-9af1-4258-b5de-ecdf4e97cca1)
 
@@ -102,7 +101,7 @@ The XDP file contains a SWF exploit (CVE-2011-0611) and two files (encrypted wit
 
 ## The fourth stage (HTML-Smuggling with DLL payload & JAR file)
 
-The HTML smuggling file is used after uploading it to the Apache server to download  other files, One of the files is DLL payload the other is a small JAR file which is used to copy and run the DLL, the command line to make payload base64 to then put it in the HTML smuggling file: `base64 payload.dll -w 0` and the same command but with jar file.
+The HTML smuggling file is used after uploading it to the apache server to download other files, One of the files is DLL payload the other is a small JAR file which is used to copy and run the DLL, the command line to make payload base64 to then put it in the HTML smuggling file: `base64 payload.dll -w 0` and the same command but with jar file.
 
 ![Screenshot from 2024-05-07 16-04-06](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/bf4b3892-3521-41f9-aa5e-740c5229e204)
 
