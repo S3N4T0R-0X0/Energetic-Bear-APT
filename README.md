@@ -37,6 +37,9 @@ This attack included several stages including exploitation of the (CVE-2011-0611
 
 7. PHP backend C2-Server: the attckers used hacked websites as simple PHP C2 Server backend.
 
+   
+8. Command and Control: make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
+
 ![Screenshot from 2024-05-04 17-37-00](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/5cd199b5-9af1-4258-b5de-ecdf4e97cca1)
 
 
