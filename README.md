@@ -8,7 +8,7 @@ https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/080808
 
 ![imageedit_6_9165265996](https://github.com/S3N4T0R-0X0/Energetic-Bear-APT-Adversary-Simulation/assets/121706460/25bb36f0-0a63-4dbe-941f-dd64ceb05e2f)
 
-This attack included several stages including exploitation of the (CVE-2011-0611) vulnerability which allows attackers to overwrite a pointer in memory by embedding a specially crafted .swf, The XDP file contains a SWF exploit CVE-2011-0611 and two files encrypted with XOR stored in the PDF file One of the files is malicious DLL the other is a JAR file which is used to copy and run the DLL by executing the Cmd command line
+This attack included several stages including exploitation of the (CVE-2011-0611) vulnerability which allows attackers to overwrite a pointer in memory by embedding a specially crafted .swf, The XDP file contains a SWF exploit CVE-2011-0611 and two files encrypted with XOR stored in the XDP file One of the files is malicious DLL the other is a JAR file which is used to copy and run the DLL by executing the Cmd command line
 
 1. CVE-2011-0611: this module exploits a memory corruption vulnerability in Adobe Flash Player versions 10.2.153.1 and earlier, i maked Modified version of the exploit based on Windows 10.
 
