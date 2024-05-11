@@ -142,11 +142,11 @@ If you need know more about Havex trojan: https://malpedia.caad.fkie.fraunhofer.
 Notes on havex trojan: http://pastebin.com/qCdMwtZ6
 
 
-In this simulation, I used a simple payload with XOR encryption to secure the connection between the C2 Server and the Target Machine.
+In this simulation i used a simple payload with XOR encryption to secure the connection between the C2 Server and the Target Machine.
 
 ![Screenshot from 2024-05-08 16-33-22](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/5ac1dcf5-e68a-43a6-985b-51dce1ea74aa)
 
-in an infinite loop, the payload receives commands from the attacker c2 , decrypts them using (XOR)encryption, executes them using system, and then sleeps for 10 seconds before repeating the loop.
+This payload uses Winsock for establishing a tcp connection between the target machine and the attacker machine, in an infinite loop the payload receives commands from the attacker c2 decrypts them using (XOR) encryption executes them using system and then sleeps for 10 seconds before repeating the loop.
 
 This network forensics form (SCADA hacker) about havex trojan: https://scadahacker.com/library/Documents/Cyber_Events/NETRESEC%20-%20SCADA%20Network%20Forensics.pdf
 
