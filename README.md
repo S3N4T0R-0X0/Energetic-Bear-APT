@@ -149,7 +149,7 @@ This network forensics form (SCADA hacker) about havex trojan: https://scadahack
 
 ## The sixth stage (encrypted XDP with XOR)
 
-After making compile for the payload and jar file and make base64 for the jar file and DLL payload, i put them in the html smuggling file, then i make host for the html file, then i put this host in the XDP file next to CVE-2011-0611, then i make XOR encryption for XDP file.
+After making compile for the payload and jar file and make base64 for the jar file and DLL payload, i put them in the html smuggling file, then i make host for the html file, then i put this host in the XDP file next to CVE-2011-0611, then i make XOR encryption for XDP file, after this convert xdp to pdf.
 
 ![Screenshot from 2024-05-08 17-41-26](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/d16dad38-99a8-4ff5-820a-235437bb74a6)
 
