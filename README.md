@@ -168,6 +168,14 @@ This PHP C2 server script enable to make remote communication by utilizes XOR en
 ![Screenshot from 2024-05-03 13-21-06](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/17237410-7464-4503-a97e-cea00a20e97b)
 
 
+`xor_encrypt($data, $key)` This function takes two parameters: the data to be encrypted ($data) and the encryption key ($key) it iterates over each character in the data and performs an XOR operation between the character and the corresponding character in the key (using modulo to repeat the key if it's shorter than the data), the result is concatenated to form the encrypted output which is returned.
+
+
+`send_to_payload($socket, $data, $encryption_key)` This function sends encrypted data to the target system (payload) over a socket connection it first encrypts the data using the xor_encrypt function with the provided encryption key then it writes the encrypted data to the socket using socket_write.
+
+
+`receive_from_payload($socket, $buffer_size, $encryption_key)` This function receives encrypted data from the target system over a socket connection it reads data from the socket with a maximum buffer size specified by $buffer_size, the received encrypted data is then decrypted using the xor_encrypt function with the provided encryption key before being returned.
+
 if you  chose (command or URL) is encrypted using XOR encryption with a user-defined key before being sent to the target.
 
 ![Screenshot from 2024-05-08 18-28-21](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/d3c50bdb-5b59-4a46-b4ac-8acdeebff440)
