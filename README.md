@@ -19,26 +19,27 @@ This attack included several stages including exploitation of the (CVE-2011-0611
 
 
 
-
 3. XDP file: this XDP file contains a malicious XML Data Package (XDP) with a SWF exploit (CVE-2011-0611), It also includes functionality to download additional files via HTML-Smuggling by apache host.
 
 
-
-4. JAR file: this jar file used to copy and run the DLL by executing the cmd command.
-
+4. HTML Smuggling: I used this to make base64 for the DLL payload  and the Jar file before making a host and putting them on the Apache server.
 
 
-5. DLL payload: the attackers used havex trojan, havex scanned the infected system to locate any supervisory control and data acquisition SCADA.
+5. JAR file: this jar file used to copy and run the DLL by executing the cmd command.
 
 
 
-6. Encrypted with XOR: the XDP file contains a SWF exploit and two files encrypted with XOR.
+6. DLL payload: the attackers used havex trojan, havex scanned the infected system to locate any supervisory control and data acquisition SCADA.
 
 
-7. PHP backend C2-Server: the attckers used hacked websites as simple PHP C2 Server backend.
+
+7. Encrypted with XOR: the XDP file contains a SWF exploit and two files encrypted with XOR.
+
+
+8. PHP backend C2-Server: the attckers used hacked websites as simple PHP C2 Server backend.
 
    
-8. Command and Control: make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
+9. Command and Control: make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
 
 ![Screenshot from 2024-05-04 17-37-00](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/5cd199b5-9af1-4258-b5de-ecdf4e97cca1)
 
@@ -99,11 +100,14 @@ if you need know more about XDP file: https://filext.com/file-extension/XDP
 
 The XDP file contains a SWF exploit (CVE-2011-0611) and two files (encrypted with XOR) stored in the PDF file, It also includes functionality to download additional files via HTML-Smuggling by apache host.
 
+## The fourth stage ( HTML Smuggling with DLL payload & Jar file
+
+The HTML smuggling file is used after uploading it to the Apache server to download  other files, One of the files is DLL payload the other is a small JAR file which is used to copy and run the DLL, the command line to make payload base64 to then put it in the HTML smuggling file: `base64 payload.dll -w 0` and the same command but with jar file.
+
 ![Screenshot from 2024-05-07 16-04-06](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/bf4b3892-3521-41f9-aa5e-740c5229e204)
 
-The html smuggling file is used after uploading it to the Apache server to download  other files, One of the files is malicious DLL the other is a small JAR file which is used to copy and run the DLL.
      
-## The fourth stage (Copy DLL by JAR file)
+## The fifth stage (Copy DLL by JAR file)
 
 This jar file used to copy and run the DLL by executing the following command:
 `cmd /c copy payload.dll %TEMP%\\payload.dll /y & rundll32.exe %TEMP%\\payload.dll,RunDllEntry`
@@ -114,7 +118,7 @@ This jar file used to copy and run the DLL by executing the following command:
 
 
 
-## The fifth stage DLL payload (Havex trojan)
+## The sixth stage DLL payload (Havex trojan)
 
 The attackers gained access to eWon’s FTP site and replaced the legitimate file with one that is bound with the Havex dropper several times.
 
@@ -147,7 +151,7 @@ in an infinite loop, the payload receives commands from the attacker c2 , decryp
 
 This network forensics form (SCADA hacker) about havex trojan: https://scadahacker.com/library/Documents/Cyber_Events/NETRESEC%20-%20SCADA%20Network%20Forensics.pdf
 
-## The sixth stage (encrypted XDP with XOR)
+## The seventh stage (encrypted XDP with XOR)
 
 After making compile for the payload and jar file and make base64 for the jar file and DLL payload, i put them in the html smuggling file, then i make host for the html file, then i put this host in the XDP file next to CVE-2011-0611, then i make XOR encryption for XDP file, after this convert xdp to pdf.
 
@@ -155,10 +159,9 @@ After making compile for the payload and jar file and make base64 for the jar fi
 
 i used browserling to make xor encrypt: https://www.browserling.com/tools/xor-encrypt
 
-## The seventh stage (PHP backend C2-Server)
+## The eighth stage (PHP backend C2-Server)
 
 This PHP C2 server script enable to make remote communication by utilizes XOR encryption for secure data transmission between the attacker server and the target.
-
 
 
 ![Screenshot from 2024-05-03 13-21-06](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/17237410-7464-4503-a97e-cea00a20e97b)
