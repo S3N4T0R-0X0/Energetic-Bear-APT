@@ -100,7 +100,7 @@ if you need know more about XDP file: https://filext.com/file-extension/XDP
 
 The XDP file contains a SWF exploit (CVE-2011-0611) and two files (encrypted with XOR) stored in the PDF file, It also includes functionality to download additional files via HTML-Smuggling by apache host.
 
-## The fourth stage ( HTML Smuggling with DLL payload & Jar file
+## The fourth stage (HTML-Smuggling with DLL payload & JAR file)
 
 The HTML smuggling file is used after uploading it to the Apache server to download  other files, One of the files is DLL payload the other is a small JAR file which is used to copy and run the DLL, the command line to make payload base64 to then put it in the HTML smuggling file: `base64 payload.dll -w 0` and the same command but with jar file.
 
