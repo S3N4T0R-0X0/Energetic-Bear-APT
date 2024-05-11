@@ -111,6 +111,7 @@ The HTML smuggling file is used after uploading it to the apache server to downl
 This jar file used to copy and run the DLL by executing the following command:
 `cmd /c copy payload.dll %TEMP%\\payload.dll /y & rundll32.exe %TEMP%\\payload.dll,RunDllEntry`
 
+It constructs a command to copy a file named payload.dll to the %TEMP% directory (typically the temporary directory) as payload.dll and then execute it using rundll32.exe and it waits for the process to finish using process.waitFor().
 
 
 ![Screenshot from 2024-05-04 09-44-48](https://github.com/S3N4T0R-0X0/EnergeticBear-APT/assets/121706460/4ade01c3-7539-45da-941e-1d8425b68320)
